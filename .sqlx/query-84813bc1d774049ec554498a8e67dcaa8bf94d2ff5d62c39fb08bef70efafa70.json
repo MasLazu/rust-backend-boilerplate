@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "INSERT INTO users (name, role, password) VALUES ($1, $2, $3) RETURNING id, name, role, password",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "name",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "role",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "password",
+        "type_info": "Varchar"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Varchar",
+        "Varchar"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "84813bc1d774049ec554498a8e67dcaa8bf94d2ff5d62c39fb08bef70efafa70"
+}

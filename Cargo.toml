@@ -1,0 +1,28 @@
+[package]
+name = "rust-backend-boilerplate"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "0.7.5"
+tower-http = { version = "0.5", features = ["fs"] }
+tower-cookies = "0.10"
+sqlx = { version = "0.7.4", features = [
+    "runtime-tokio-rustls",
+    "macros",
+    "postgres",
+    "migrate",
+] }
+sqlx-cli = "0.7.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "3"
+derive_more = { version = "0.99.17", features = ["from", "display"] }
+strum_macros = "0.26"
+jwt = "0.16.0"
+hmac = "0.12.1"
+sha2 = "0.10.8"
+bcrypt = "0.15.1"
