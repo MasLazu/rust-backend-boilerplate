@@ -64,7 +64,10 @@ async fn response_mapper(mut ctx: Ctx, uri: Uri, req_method: Method, res: Respon
             response_error
         );
 
-        return Response::new(Body::from(response_error.to_string()));
+        return Response::builder()
+            .status(code)
+            .body(Body::from(response_error.to_string()))
+            .unwrap();
     }
 
     println!(
